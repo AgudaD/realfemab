@@ -28,7 +28,7 @@ export default function Projects() {
       <BentoGrid>
         <BentoCard
           backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606846/femab/crystal_towers_txpgl3.jpg"
-          className="md:col-span-2 md:row-span-4"
+          className="row-span-2 md:col-span-2 md:row-span-4"
         >
           <h3 className="text-2xl font-semibold mb-4 capitalize">
             crystal towers
@@ -36,14 +36,14 @@ export default function Projects() {
           <Button>View Project</Button>
         </BentoCard>
 
-        <BentoCard backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606982/femab/crestville_estate_ttta2z.jpg" className="md:row-span-2">
+        <BentoCard backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606982/femab/crestville_estate_ttta2z.jpg" className="row-span-2 md:row-span-2">
           <h3 className="text-xl font-semibold mb-4 capitalize">
             crestville estate
           </h3>
           <Button>View Project</Button>
         </BentoCard>
 
-        <BentoCard backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778607133/femab/Peninsula-Garden-estate_mih1fx.png" className="md:row-span-2">
+        <BentoCard backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778607133/femab/Peninsula-Garden-estate_mih1fx.png" className="row-span-2 md:row-span-2">
           <h3 className="text-xl font-semibold mb-4 capitalize">
             peninsula gardens estate
           </h3>
@@ -52,7 +52,7 @@ export default function Projects() {
 
         <BentoCard
           backgroundImage="https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606921/femab/platinum_gate_estate_e3d239.jpg"
-          className="md:col-span-2 md:row-span-2"
+          className="row-span-2 md:col-span-2 md:row-span-2"
         >
           <h3 className="text-2xl font-semibold mb-4 capitalize">
             platinum gate estate
