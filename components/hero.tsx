@@ -105,7 +105,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Background Slides */}
       <div className="absolute inset-0 -z-10">
         {slides.map((slide, index) => (
           <div
@@ -126,15 +125,12 @@ export default function Hero() {
           </div>
         ))}
 
-        {/* Dark Overlay - Optimized for Blue Accent */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85" />
         <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-(--background) to-transparent" />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
-          {/* Eyebrow */}
           <div
             ref={eyebrowRef}
             className="flex items-center gap-3 mb-6 opacity-0"
@@ -145,7 +141,6 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Headline */}
           <h1
             ref={headlineRef}
             className="text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.05] text-white opacity-0"
@@ -154,7 +149,6 @@ export default function Hero() {
             <span className="text-(--color-accent)">Dream Property</span>
           </h1>
 
-          {/* Subtitle */}
           <p
             ref={subRef}
             className="mt-6 text-lg text-white/80 max-w-md opacity-0"
@@ -163,7 +157,6 @@ export default function Hero() {
             residential and commercial properties.
           </p>
 
-          {/* CTA Buttons */}
           <div ref={ctasRef} className="mt-10 flex flex-wrap gap-4 opacity-0">
             <Link
               href="/projects"
@@ -181,7 +174,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide Indicators */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-40 flex gap-3">
         {slides.map((_, index) => (
           <button

@@ -16,7 +16,6 @@ export default function MainSection() {
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Auto image slider
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((c) => (c + 1) % images.length);
@@ -24,7 +23,6 @@ export default function MainSection() {
     return () => clearInterval(timer);
   }, []);
 
-  // GSAP Scroll Animation
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -42,7 +40,7 @@ export default function MainSection() {
             start: "top 75%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -58,7 +56,7 @@ export default function MainSection() {
             start: "top 75%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     });
 
@@ -71,13 +69,10 @@ export default function MainSection() {
     <section ref={sectionRef} className="py-24 bg-(--background)">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
-          {/* Image Section */}
           <div
             ref={imageRef}
             className="relative w-full lg:w-1/2 h-130 lg:h-155 shrink-0"
           >
-            {/* Background Image */}
             <div className="absolute top-0 left-0 w-[88%] h-[88%] rounded-3xl overflow-hidden shadow-2xl">
               <div className="relative w-full h-full">
                 {images.map((src, index) => (
@@ -86,14 +81,18 @@ export default function MainSection() {
                     className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
                     style={{ opacity: index === next ? 1 : 0 }}
                   >
-                    <Image src={src} alt="Property" fill className="object-cover" />
+                    <Image
+                      src={src}
+                      alt="Property"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
               <div className="absolute inset-0 bg-black/40 rounded-3xl" />
             </div>
 
-            {/* Foreground Image */}
             <div className="absolute bottom-0 right-0 w-[88%] h-[88%] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
               <div className="relative w-full h-full">
                 {images.map((src, index) => (
@@ -102,18 +101,24 @@ export default function MainSection() {
                     className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
                     style={{ opacity: index === current ? 1 : 0 }}
                   >
-                    <Image src={src} alt="Property" fill className="object-cover" />
+                    <Image
+                      src={src}
+                      alt="Property"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Accent Dot */}
             <div className="absolute -top-4 -left-4 w-6 h-6 rounded-full bg-(--color-accent)" />
           </div>
 
-          {/* Content Section */}
-          <div ref={contentRef} className="w-full lg:w-1/2 flex flex-col justify-center">
+          <div
+            ref={contentRef}
+            className="w-full lg:w-1/2 flex flex-col justify-center"
+          >
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-(--color-accent)" />
               <p className="text-(--color-accent) text-sm font-medium tracking-widest uppercase">
@@ -128,15 +133,15 @@ export default function MainSection() {
 
             <p className="text-lg text-white/70 leading-relaxed mb-6">
               Through strategic real estate investment, financial solutions, and
-              professional management services, FEMAB Properties Limited continues
-              to play a meaningful role in the growth and development of Nigeria&apos;s
-              economy.
+              professional management services, FEMAB Properties Limited
+              continues to play a meaningful role in the growth and development
+              of Nigeria&apos;s economy.
             </p>
 
             <p className="text-lg text-white/70 leading-relaxed mb-10">
-              Beyond our flagship developments, the company maintains a strong and
-              expanding property portfolio across Nigeria, with growing interests in
-              cross-border real estate opportunities.
+              Beyond our flagship developments, the company maintains a strong
+              and expanding property portfolio across Nigeria, with growing
+              interests in cross-border real estate opportunities.
             </p>
 
             <Link
@@ -144,7 +149,9 @@ export default function MainSection() {
               className="inline-flex items-center gap-3 text-(--color-accent) hover:text-white font-medium group w-fit transition-colors"
             >
               Learn More About Us
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
           </div>
         </div>

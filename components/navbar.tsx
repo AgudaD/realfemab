@@ -14,7 +14,6 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src={siteConfig.logo}
@@ -26,7 +25,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center gap-8">
             {siteConfig.nav.map(({ label, href }) => {
               const isActive = pathname === href;
@@ -40,7 +38,6 @@ export default function Navbar() {
                   >
                     {label}
 
-                    {/* Animated Underline on Hover + Active */}
                     <span
                       className={`absolute bottom-0 left-0 h-[2.5px] bg-(--color-accent) transition-all duration-300 ease-out
                         ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
@@ -51,7 +48,6 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* CTA Button */}
           <Link
             href="/contact"
             className="hidden lg:inline-flex items-center px-6 py-2.5 text-sm font-medium rounded-lg 
@@ -61,7 +57,6 @@ export default function Navbar() {
             Get in Touch
           </Link>
 
-          {/* Mobile Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-white p-2"
@@ -81,7 +76,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden mt-6 bg-black/90 backdrop-blur-md border-t border-white/10 py-6 rounded-2xl">
             <ul className="flex flex-col gap-2 px-6 text-white">
