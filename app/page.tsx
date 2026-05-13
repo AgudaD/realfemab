@@ -9,13 +9,11 @@ import ServicesStrip from "@/components/services";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Hero />
       <MainSection />
       <AboutSection />
       <ServicesStrip />
       <Projects />
-      <Footer />
     </div>
   );
 }
