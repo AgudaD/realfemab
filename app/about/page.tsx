@@ -1,6 +1,4 @@
-import WhoWeAre from "@/components/about/whoAreWe";
-import VisionMission from "@/components/about/visionMission";
-import OurHistory from "@/components/about/ourhistory";
+import AboutTabs from "@/components/about/abouttabs";
 
 export const metadata = {
   title: "About Us | Femab Properties",
@@ -9,11 +7,5 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  return (
-    <>
-      <WhoWeAre />
-      <VisionMission />
-      <OurHistory />
-    </>
-  );
+  return <AboutTabs />;
 }
