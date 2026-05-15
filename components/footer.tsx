@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-(--background) text-zinc-300 border-t border-zinc-800 px-6 lg:px-12 py-16 cursor-pointer">
       <div className="max-w-7xl mx-auto grid gap-12 md:grid-cols-4">
         <div className="space-y-4 md:col-span-1">
-          <h2 className="text-white text-xl font-semibold">
+          <h2 className="text-accent text-xl font-semibold">
             FEMAB PROPERTIES LIMITED
           </h2>
 
