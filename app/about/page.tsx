@@ -1,4 +1,5 @@
 import AboutTabs from "@/components/about/abouttabs";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "About Us | Femab Properties",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutTabs />;
+  return (
+    <Suspense fallback={<div className="text-white">Loading...</div>}>
+      <AboutTabs />
+    </Suspense>
+  );
 }
