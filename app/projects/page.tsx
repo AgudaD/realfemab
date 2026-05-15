@@ -15,27 +15,27 @@ const projects = [
     title: "Eko Atlantic Residential Towers",
     location: "Lagos, Nigeria",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606982/femab/crestville_estate_ttta2z.jpg",
-    span: "col-span-2 row-span-2",
+    span: "col-span-2 row-span-2", 
   },
   {
     id: 2,
     title: "Crystal Towers",
     location: "Lagos, Nigeria",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778865541/femab/Crystal-towers-1_onauqo.png",
-    span: "col-span-2 row-span-1",
+    span: "col-span-2 row-span-1", 
   },
   {
     id: 3,
     title: "Crestville Estate",
     location: "Ikorodu, Lagos",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778865611/femab/Crestville-estate-Ikorodu-_lrntkl.jpg",
-    span: "col-span-1 row-span-2",
+    span: "col-span-1 row-span-2", 
   },
   {
     id: 4,
     title: "Ikoyi Luxury Apartments",
     location: "Ikoyi, Lagos",
-    image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606982/femab/crestville_estate_ttta2z.jpg",
+    image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778004409/femab/femab-heroImage-two_x80tu7.jpg",
     span: "col-span-1 row-span-1",
   },
   {
@@ -43,23 +43,24 @@ const projects = [
     title: "Peninsula Garden Estate",
     location: "Ogombo, Nigeria",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778607133/femab/Peninsula-Garden-estate_mih1fx.png",
-    span: "col-span-2 row-span-2",
+    span: "col-span-2 row-span-2", 
   },
   {
     id: 6,
-    title: "Diamond Estate 1, 2 & 3",
+    title: "Diamond Estate",
     location: "Sangotedo, Nigeria",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778004409/femab/femab-heroImage-two_x80tu7.jpg",
-    span: "col-span-1 row-span-1",
+    span: "col-span-1 row-span-2", 
   },
   {
     id: 7,
     title: "Dream Homes Estate",
     location: "Rivers, Nigeria",
     image: "https://res.cloudinary.com/dgqyobxzg/image/upload/v1778606982/femab/crestville_estate_ttta2z.jpg",
-    span: "col-span-1 row-span-2",
+    span: "col-span-2 row-span-1", 
   },
 ];
+
 
 export default function Projects() {
   const gridRef = useRef<HTMLDivElement>(null);
@@ -88,7 +89,7 @@ export default function Projects() {
           trigger: gridRef.current,
           start: "top 80%",
         },
-      }
+      },
     );
   }, []);
 
@@ -100,8 +101,8 @@ export default function Projects() {
         </h1>
 
         <p className="text-zinc-400 max-w-2xl mx-auto">
-          With over a decade of experience in construction and real estate,
-          we deliver landmark developments across Nigeria.
+          With over a decade of experience in construction and real estate, we
+          deliver landmark developments across Nigeria.
         </p>
       </section>
 
@@ -114,9 +115,7 @@ export default function Projects() {
                   <h3 className="text-white text-lg font-semibold">
                     {project.title}
                   </h3>
-                  <p className="text-zinc-300 text-sm">
-                    {project.location}
-                  </p>
+                  <p className="text-zinc-300 text-sm">{project.location}</p>
                 </div>
               </BentoCard>
             </div>

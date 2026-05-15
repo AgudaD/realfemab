@@ -9,11 +9,9 @@ export function BentoGrid({ children }: BentoGridProps) {
     <div
       className="
         grid
-        grid-cols-1
-        md:grid-cols-3
-        lg:grid-cols-4
+        grid-cols-1 md:grid-cols-2 lg:grid-cols-4
         gap-5 md:gap-6
-        auto-rows-[160px] md:auto-rows-[180px]
+        auto-rows-[240px] md:auto-rows-[260px]
       "
     >
       {children}
