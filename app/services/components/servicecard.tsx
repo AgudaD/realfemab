@@ -41,16 +41,14 @@ export default function ServiceCard({ service, onView }: ServiceCardProps) {
       onMouseLeave={handleLeave}
       className="
         group
-        bg-zinc-950/80
-        border border-zinc-800
-        hover:border-zinc-700
+        bg-zinc-900
+        border border-zinc-700/50
         rounded-2xl
         overflow-hidden
         transition-colors
         will-change-transform
       "
     >
-      {/* IMAGE */}
       <div className="relative h-64 overflow-hidden">
         <Image
           src={service.image}
@@ -66,11 +64,8 @@ export default function ServiceCard({ service, onView }: ServiceCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       </div>
 
-      {/* CONTENT */}
       <div className="p-6">
-        <h3 className="text-white text-xl font-semibold">
-          {service.title}
-        </h3>
+        <h3 className="text-white text-xl font-semibold">{service.title}</h3>
 
         <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
           {service.short}
